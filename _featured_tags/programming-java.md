@@ -1,8 +1,9 @@
 ---
 layout: tag-blog
-title: C
-slug: c
+title: JAVA
+slug: java
 category: programming
 menu: false
-order: 3
+order: 2
 ---
+

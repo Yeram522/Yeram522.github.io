@@ -4,5 +4,5 @@ title: Github
 slug: github
 category: reference
 menu: false
-order: 2
+order: 1
 ---

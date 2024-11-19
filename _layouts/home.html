@@ -1,3 +1,80 @@
 ---
 layout: default
 ---
+
+<link rel="stylesheet" href="/assets/css/styles.css">
+<div class="portfolio-container">
+<!-- 히어로 섹션 -->
+<section class="portfolio-hero">
+  <h1>Yeram's Portfolio</h1>
+  <p>Game Software Developer</p>
+  <div class="profile-area">
+    <img src="/assets/img/blog_Logo3.png" alt="Yeram" class="me">
+    <p>Hongik University Game Software Major</p>
+  </div>
+</section>
+
+<!-- 프로젝트 섹션 -->
+<section class="portfolio-section">
+  <h2 class="section-title">Featured Projects</h2>
+  <div class="portfolio-grid">
+    {% for post in site.categories.project limit:6 %}
+    <article class="portfolio-card">
+      <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="portfolio-img">
+      <div class="portfolio-content">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt }}</p>
+        <a href="{{ post.url }}" class="button">View Project</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- 스킬 섹션 -->
+<section class="skills-section">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Programming Languages</h3>
+      <ul>
+        <li>C++</li>
+        <li>C#</li>
+        <li>Python</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Game Development</h3>
+      <ul>
+        <li>Unity</li>
+        <li>Unreal Engine</li>
+        <li>Game Design</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>Tools & Technologies</h3>
+      <ul>
+        <li>Git</li>
+        <li>Visual Studio</li>
+        <li>3D Modeling</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 연락처 섹션 -->
+<section class="contact-section">
+  <h2 class="section-title">Get in Touch</h2>
+  <div class="social-links">
+    <a href="mailto:Yeram522@gmail.com" class="social-link">
+      <span class="icon-mail"></span>
+    </a>
+    <a href="https://github.com/Yeram522" class="social-link">
+      <span class="icon-github"></span>
+    </a>
+    <a href="https://instagram.com/ye_ram00min" class="social-link">
+      <span class="icon-instagram"></span>
+    </a>
+  </div>
+</section>
+</div>

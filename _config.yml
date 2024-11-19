@@ -92,6 +92,10 @@ collections:
   projects:
     permalink:       /projects/:path/
     output:          true
+  portfolio:         # 포트폴리오 섹션을 위한 새 컬렉션 추가
+    permalink:       /portfolio/:path/
+    output:          true
+
 
 # -----------------------------------------------------------------------------
 #  Advanced configuration
