@@ -1,5 +1,8 @@
 # This file contains meta data for various social media sites
 ---
+  tistory:
+    name: tistory
+    prepend: 'https://'
   email:
     name: Email
     icon: icon-mail
