@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JAVA] Scope, Type Casting"
+title: "[JAVA] 6.Scope, Type Casting"
 subtitle: "스코프, 형변환"
 categories: programming
 tags: java study

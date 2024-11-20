@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JAVA] Variable"
+title: "[JAVA] 2.Variable"
 subtitle: "변수"
 categories: programming
 tags: java study

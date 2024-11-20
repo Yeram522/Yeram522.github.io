@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JAVA] Start"
+title: "[JAVA] 1.Start"
 subtitle: "Hello World!"
 categories: programming
 tags: java study

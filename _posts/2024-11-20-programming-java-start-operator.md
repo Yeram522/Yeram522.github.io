@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JAVA] Operator"
+title: "[JAVA] 3.Operator"
 subtitle: "연산자"
 categories: programming
 tags: java study
