@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JAVA] Loop"
+title: "[JAVA] 5.Loop"
 subtitle: "반복문"
 categories: programming
 tags: java study
