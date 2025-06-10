@@ -188,7 +188,27 @@ body {
     justify-content: center;
     color: white;
     font-size: 48px;
+    cursor: pointer;
     position: relative;
+}
+
+.project-image::after {
+    content: '👆 클릭하여 자세히 보기';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-image:hover::after {
+    opacity: 1;
 }
 
 .project-image.bg-1 {

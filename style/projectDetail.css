@@ -1,0 +1,110 @@
+/* 상세 페이지용 CSS 추가 */
+.project-detail {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.project-detail-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.project-meta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.project-detail-period,
+.project-detail-team,
+.project-detail-role {
+    background-color: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #666;
+}
+
+.detail-section {
+    margin-bottom: 25px;
+}
+
+.detail-section h4 {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 14px;
+}
+
+.tech-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.tech-category h5 {
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 12px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.tech-tag {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.challenge-item {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.challenge-problem {
+    margin-bottom: 6px;
+    color: #d32f2f;
+}
+
+.challenge-solution {
+    color: #2e7d32;
+}
+
+.project-links-detail {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.detail-link {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.detail-link.github {
+    background-color: #333;
+    color: white;
+}
+
+.detail-link.demo {
+    background-color: #4caf50;
+    color: white;
+}
+
+.detail-link.notion {
+    background-color: #000;
+    color: white;
+}
