@@ -1,0 +1,151 @@
+/* 목차 네비게이션 스타일 */
+.table-of-contents {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.toc-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 12px 12px 0 0;
+}
+
+.toc-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toc-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.toc-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.toc-icon {
+    font-size: 14px;
+    color: #666;
+}
+
+.toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    min-width: 140px;
+}
+
+.toc-list li {
+    margin: 0;
+}
+
+.toc-link {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    position: relative;
+}
+
+.toc-link:hover {
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.toc-link.active {
+    color: #2196f3;
+    background-color: rgba(33, 150, 243, 0.1);
+    border-left-color: #2196f3;
+    font-weight: 600;
+}
+
+/* 목차 숨김/보임 기능 */
+.table-of-contents.collapsed .toc-list {
+    display: none;
+}
+
+.table-of-contents.collapsed {
+    width: auto;
+}
+
+/* 스크롤 인디케이터 */
+.toc-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #2196f3, #64b5f6);
+    border-radius: 0 2px 2px 0;
+    transition: height 0.3s ease;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+    .table-of-contents {
+        right: 20px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-of-contents {
+        right: 15px;
+        top: 20px;
+        transform: none;
+        max-height: 60vh;
+    }
+    
+    .toc-list {
+        min-width: 120px;
+    }
+    
+    .toc-link {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-of-contents {
+        right: 10px;
+        scale: 0.9;
+    }
+}
+
+/* 스크롤바 스타일링 */
+.table-of-contents::-webkit-scrollbar {
+    width: 4px;
+}
+
+.table-of-contents::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.table-of-contents::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}

@@ -5,6 +5,12 @@ export const projectDetails = {
         period: '2024.09 - 2024.11',
         team: '4명 (FE 2명, BE 2명)',
         role: 'Frontend 개발',
+        tasks:[
+            'OpenAI API를 활용한 CS 문제 자동 생성',
+            'Socket.io를 이용한 실시간 퀴즈 대결',
+            'React Query를 활용한 효율적인 상태 관리',
+            '반응형 웹 디자인으로 모바일 최적화'
+        ],
         overview: 'OpenAI API를 활용한 맞춤형 CS 퀴즈 플랫폼으로, 실시간 퀴즈 대결과 개인별 맞춤 문제 생성 기능을 제공합니다.',
         features: [
             'OpenAI API를 활용한 CS 문제 자동 생성',
@@ -36,7 +42,8 @@ export const projectDetails = {
             github: 'https://github.com/Jungle-CQuiS/frontend',
             demo: null,
             notion: 'https://yeram-info.notion.site/Cquis-159b8e01c55c80c8a18ae18bda3b45c6?pvs=74'
-        }
+        },
+        review: '좋은 경험이었다.'
     },
     'pintos': {
         title: '크래프톤 정글 핀토스 프로젝트',

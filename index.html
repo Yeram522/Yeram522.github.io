@@ -8,18 +8,17 @@
    <link rel="stylesheet" href="style/style.css">
    <link rel="stylesheet" href="style/skillTags.css">
    <link rel="stylesheet" href="style/modalStyle.css">
+   <link rel="stylesheet" href="style/tableOfContentsStyle.css">
    <link rel="stylesheet" href="style/projectDetail.css">
 </head>
 
 <body>
    <div class="container">
-      <!-- Profile Section (About Me와 Contact 위쪽에 추가) -->
-      <section class="profile-section">
+      <section class="profile-section" id="profile">
          <div class="profile-container">
             <div class="profile-image-wrapper">
                <div class="profile-image">
-                  <!-- 이미지가 준비될 때까지는 주석 처리 -->
-                  <!-- <img src="images/profile.jpg" alt="김예람 프로필 사진" /> -->
+                  <img src="images/profile.png" alt="김예람 프로필 사진" />
 
                   <div class="profile-placeholder">
                      <span>👩‍💻</span>
@@ -28,7 +27,7 @@
             </div>
             <div class="profile-info">
                <h1 class="profile-name">김예람</h1>
-               <p class="profile-subtitle">Java/Spring 신입 백엔드 개발자</p>
+               <p class="profile-subtitle">신입 백엔드 개발자</p>
                <div class="profile-tags">
                   <span class="profile-tag">#성실</span>
                   <span class="profile-tag">#열정</span>
@@ -43,7 +42,7 @@
          </div>
       </section>
 
-      <div class="intro-section">
+      <div class="intro-section" id="about">
          <section class="section about-section">
             <!-- About Section -->
             <section class="section">
@@ -61,7 +60,10 @@
          <section class="section contact-section">
             <!-- Contact Section -->
             <section class="section">
-               <h2 class="section-title">CONTACT</h2>
+               <h2 class="section-title">
+                  <span class="emoji">📞</span>
+                  CONTACT
+               </h2>
                <ul class="contact-list">
                   <li>Email: <a href="mailto:yelamg963@gmail.com">yelamg963@gmail.com</a></li>
                   <li>Github: <a href="https://github.com/Yeram522" target="_blank">https://github.com/Yeram522</a>
@@ -77,27 +79,33 @@
 
 
       <!-- Education Section -->
-      <section class="section">
-         <h2 class="section-title">EDUCATION</h2>
+      <section class="section" id="education">
+         <h2 class="section-title">
+            <span class="emoji">🏫</span>
+            EDUCATION
+         </h2>
          <div class="education-item">
             <div class="item-header">
-               <div class="item-title">Java/Spring 백엔드 개발자 과정</div>
+               <div class="item-title">여성가족부 직업훈련 Java/Spring 백엔드 개발자 과정</div>
                <div class="item-period">2025.04 ~</div>
             </div>
             <div class="item-header">
-               <div class="item-title">크래프톤 정글 6기</div>
+               <div class="item-title">크래프톤 정글 6기 수료</div>
                <div class="item-period">2024.07 ~ 2024.12</div>
             </div>
             <div class="item-header">
-               <div class="item-title">홍익대학교 세종캠퍼스</div>
+               <div class="item-title">홍익대학교 세종캠퍼스 게임소프트웨어학과 졸업</div>
                <div class="item-period">2019.03 ~ 2024.02</div>
             </div>
          </div>
       </section>
 
       <!-- Skills Section -->
-      <section class="section">
-         <h2 class="section-title">SKILLS</h2>
+      <section class="section" id="skills">
+         <h2 class="section-title">
+            <span class="emoji">🔨</span>
+            SKILLS
+         </h2>
          <div class="skills-list">
             <div class="skill-category">
                <h4>Backend</h4>
@@ -200,7 +208,7 @@
          </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="certificate">
          <h2 class="section-title">
             <span class="emoji">📜</span>
             CERTIFICATE
@@ -227,25 +235,14 @@
       </section>
 
       <!-- Awards Section -->
-      <section class="section">
+      <section class="section" id="awards">
          <h2 class="section-title">
             <span class="emoji">🏆</span>
             AWARDS
          </h2>
          <div class="award-item">
             <div class="item-header">
-               <div class="item-title">HOLY 학습공동체</div>
-               <div class="item-period">2021-09~2021-11</div>
-            </div>
-            <div class="item-company">홍익대학교 교수학습지원센터터</div>
-            <div class="item-description">
-               자료구조 전공 과목을 심화 학습하기 위해 학습공동체 프로그램에 참여하였고, <span class="highlight">우수동아리</span>로 선정되어 수상했습니다.<br>
-               학습 공동체 리더 역할을 하며 전공 교재 문제 풀이 및 연관된 코딩테스트 문제를 함께 해결하며 함께 학습하도록 동아리를 이끌었습니다.
-            </div>
-         </div>
-         <div class="award-item">
-            <div class="item-header">
-               <div class="item-title">졸업작품 우수상</div>
+               <div class="item-title">G-Festival 졸업작품 우수작 선정</div>
                <div class="item-period">2024.02</div>
             </div>
             <div class="item-company">홍익대학교 게임학부</div>
@@ -254,10 +251,56 @@
                C++ 언어를 기반으로 컴포넌트 패턴, 싱글톤 패턴등을 활용하여 객체지향 원칙을 지키며 확장성 있는 코드를 설계하였습니다.
             </div>
          </div>
+         <div class="award-item">
+            <div class="item-header">
+               <div class="item-title">게임학부 공모전 프로토타입 부문</div>
+               <div class="item-period">2022.03.24</div>
+            </div>
+            <div class="item-company">홍익대학교 게임학부 </div>
+            <div class="item-description">
+               자료구조 전공 과목을 심화 학습하기 위해 학습공동체 프로그램에 참여하였고, <span class="highlight">우수동아리</span>로 선정되어 수상했습니다.<br>
+               학습 공동체 리더 역할을 하며 전공 교재 문제 풀이 및 연관된 코딩테스트 문제를 함께 해결하며 함께 학습하도록 동아리를 이끌었습니다.
+            </div>
+         </div>
+         <div class="award-item">
+            <div class="item-header">
+               <div class="item-title">HOLY 학습공동체 우수동아리</div>
+               <div class="item-period">2022.02.28</div>
+            </div>
+            <div class="item-company">홍익대학교 교수학습지원센터</div>
+            <div class="item-description">
+               자료구조 전공 과목을 심화 학습하기 위해 학습공동체 프로그램에 참여하였고, <span class="highlight">우수동아리</span>로 선정되어 수상했습니다.<br>
+               학습 공동체 리더 역할을 하며 전공 교재 문제 풀이 및 연관된 코딩테스트 문제를 함께 해결하며 함께 학습하도록 동아리를 이끌었습니다.
+            </div>
+         </div>
+         <div class="award-item">
+            <div class="item-header">
+               <div class="item-title">게임학부 공모전 프로토타입 부문</div>
+               <div class="item-period">2021.03.24</div>
+            </div>
+            <div class="item-company">홍익대학교 게임학부 </div>
+            <div class="item-description">
+               자료구조 전공 과목을 심화 학습하기 위해 학습공동체 프로그램에 참여하였고, <span class="highlight">우수동아리</span>로 선정되어 수상했습니다.<br>
+               학습 공동체 리더 역할을 하며 전공 교재 문제 풀이 및 연관된 코딩테스트 문제를 함께 해결하며 함께 학습하도록 동아리를 이끌었습니다.
+            </div>
+         </div>
+         <div class="award-item">
+            <div class="item-header">
+               <div class="item-title">성균관 캠퍼스타운 [5대궁 AR창업 프로젝트]</div>
+               <div class="item-period">2020.11.24</div>
+            </div>
+            <div class="item-company">성균관대학교 캠퍼스타운</div>
+            <div class="item-description">
+               자료구조 전공 과목을 심화 학습하기 위해 학습공동체 프로그램에 참여하였고, <span class="highlight">우수동아리</span>로 선정되어 수상했습니다.<br>
+               학습 공동체 리더 역할을 하며 전공 교재 문제 풀이 및 연관된 코딩테스트 문제를 함께 해결하며 함께 학습하도록 동아리를 이끌었습니다.
+            </div>
+         </div>
+
+
       </section>
 
       <!-- Projects Section -->
-      <section class="section">
+      <section class="section" id="projects">
          <h2 class="section-title">
             <span class="emoji">🛠</span>
             Project
@@ -265,8 +308,9 @@
          <h2>팀 프로젝트</h2><br>
          <div class="project-grid">
             <div class="project-card">
-               <div class="project-image bg-1" data-project-key="cquis" data-project-title="Cquis">
-                  🦑
+               <div class="project-image bg-1" style="background-image: url('../images/cquis-preview.png');"
+                  data-project-key="cquis" data-project-title="Cquis">
+
                </div>
                <div class="project-content">
                   <h4>Cquis</h4>
@@ -381,85 +425,8 @@
          </div>
       </section>
 
-      <!-- Learning & Development Section -->
-      <section class="section">
-         <h2 class="section-title">
-            <span class="emoji">📚</span>
-            LEARNING & DEVELOPMENT
-         </h2>
-
-         <h3 style="margin-bottom: 20px; font-size: 14px; font-weight: 600;">온라인 강의</h3>
-         <div class="learning-grid">
-            <div class="learning-item course">
-               <div class="learning-header">
-                  <div class="learning-title">스프링 핵심 원리 - 기본편</div>
-                  <div class="learning-date">2024.05</div>
-               </div>
-               <div class="learning-platform">인프런 - 김영한</div>
-               <div class="learning-status completed">수료</div>
-            </div>
-
-            <div class="learning-item course">
-               <div class="learning-header">
-                  <div class="learning-title">Java의 정석</div>
-                  <div class="learning-date">2024.03</div>
-               </div>
-               <div class="learning-platform">인프런 - 남궁성</div>
-               <div class="learning-status completed">수료</div>
-            </div>
-
-            <div class="learning-item course">
-               <div class="learning-header">
-                  <div class="learning-title">React 완벽 가이드</div>
-                  <div class="learning-date">2024.01</div>
-               </div>
-               <div class="learning-platform">Udemy</div>
-               <div class="learning-status completed">수료</div>
-            </div>
-         </div>
-
-         <h3 style="margin: 40px 0 20px 0; font-size: 14px; font-weight: 600;">도서</h3>
-         <div class="learning-grid">
-            <div class="learning-item book">
-               <div class="learning-header">
-                  <div class="learning-title">이펙티브 자바</div>
-                  <div class="learning-date">2024.06</div>
-               </div>
-               <div class="learning-platform">조슈아 블로크</div>
-               <div class="learning-status reading">읽는 중</div>
-            </div>
-
-            <div class="learning-item book">
-               <div class="learning-header">
-                  <div class="learning-title">스프링 부트와 AWS로 혼자 구현하는 웹 서비스</div>
-                  <div class="learning-date">2024.04</div>
-               </div>
-               <div class="learning-platform">이동욱</div>
-               <div class="learning-status completed">완독</div>
-            </div>
-
-            <div class="learning-item book">
-               <div class="learning-header">
-                  <div class="learning-title">클린 코드</div>
-                  <div class="learning-date">2024.02</div>
-               </div>
-               <div class="learning-platform">로버트 C. 마틴</div>
-               <div class="learning-status completed">완독</div>
-            </div>
-
-            <div class="learning-item book">
-               <div class="learning-header">
-                  <div class="learning-title">HTTP 완벽 가이드</div>
-                  <div class="learning-date">2024.01</div>
-               </div>
-               <div class="learning-platform">데이빗 고울리</div>
-               <div class="learning-status completed">완독</div>
-            </div>
-         </div>
-      </section>
-
       <!-- Others Section -->
-      <section class="section">
+      <section class="section" id="others">
          <h2 class="section-title">
             <span class="emoji">👀</span>
             OTHERS
@@ -482,7 +449,7 @@
                <div class="item-title">HOLY 학습 공동체</div>
                <div class="item-period">2021.09 ~ 2021.12 , 2022.03 ~ 2021.06</div>
             </div>
-            <div class="item-company">팀리더더</div>
+            <div class="item-company">팀리더</div>
             <div class="item-description">
                자료구조, 알고리즘 전공 수업을 심화 학습하기 위한 스터디를 개설하고 스터디를 이끌었습니다. 21년도에는 우수동아리를 수상하였습니다.
             </div>
@@ -518,8 +485,30 @@
       </div>
    </div>
 
+   <!-- 목차 네비게이션 -->
+   <nav class="table-of-contents" id="toc">
+      <div class="toc-header">
+         <span class="toc-title">목차</span>
+         <button class="toc-toggle" id="tocToggle">
+            <span class="toc-icon">≡</span>
+         </button>
+      </div>
+      <ul class="toc-list" id="tocList">
+         <li><a href="#profile" class="toc-link" data-section="profile">프로필</a></li>
+         <li><a href="#about" class="toc-link" data-section="about">소개</a></li>
+         <li><a href="#education" class="toc-link" data-section="education">학력</a></li>
+         <li><a href="#skills" class="toc-link" data-section="skills">기술</a></li>
+         <li><a href="#certificate" class="toc-link" data-section="certificate">자격증</a></li>
+         <li><a href="#awards" class="toc-link" data-section="awards">수상</a></li>
+         <li><a href="#projects" class="toc-link" data-section="projects">프로젝트</a></li>
+         <li><a href="#learning" class="toc-link" data-section="learning">학습</a></li>
+         <li><a href="#others" class="toc-link" data-section="others">기타</a></li>
+      </ul>
+   </nav>
+
    <!--  ES6 모듈 로드-->
    <script type="module" src="js/main.js"></script>
+   <script src="js/tableOfContents.js"></script>
 </body>
 
 </html>

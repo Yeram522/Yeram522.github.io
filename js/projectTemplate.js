@@ -38,6 +38,13 @@ export function createProjectDetailHTML(projectData) {
                 </section>
 
                 <section class="detail-section">
+                    <h4>😀 담당 업무 </h4>
+                    <ul>
+                        ${projectData.tasks.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                </section>
+
+                <section class="detail-section">
                     <h4>🔥 주요 성과</h4>
                     <ul class="results-list">
                         ${projectData.results.map(result => `<li>${result}</li>`).join('')}
@@ -58,6 +65,11 @@ export function createProjectDetailHTML(projectData) {
                             </div>
                         `).join('')}
                     </div>
+                </section>
+
+                <section class="detail-section">
+                    <h4>🤔 회고 </h4>
+                    ${projectData.review}
                 </section>
 
                 <section class="detail-section">
