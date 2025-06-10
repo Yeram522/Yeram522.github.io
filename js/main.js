@@ -1,6 +1,7 @@
 // js/main.js
 import { projectDetails } from './projectData.js';
 import { ModalController } from './modalController.js';
+import { DetailModalController } from './detailModal.js';
 
 class Portfolio {
     constructor() {
@@ -34,4 +35,6 @@ class Portfolio {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM 로드됨, Portfolio 초기화 시작');
     new Portfolio();
+
+    window.detailModalController = new DetailModalController();
 });
