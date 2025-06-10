@@ -1,5 +1,5 @@
-// projectTemplate.js
-function createProjectDetailHTML(projectData) {
+// js/projectTemplate.js
+export function createProjectDetailHTML(projectData) {
     return `
         <div class="project-detail">
             <div class="project-detail-header">
@@ -72,6 +72,3 @@ function createProjectDetailHTML(projectData) {
         </div>
     `;
 }
-
-// 전역으로 내보내기
-window.createProjectDetailHTML = createProjectDetailHTML;

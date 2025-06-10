@@ -1,56 +1,37 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById('projectModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const closeButton = document.getElementById('closeModal');
-    const projectImages = document.querySelectorAll('.project-image');
+// js/main.js
+import { projectDetails } from './projectData.js';
+import { ModalController } from './modalController.js';
 
-    function openModal(projectKey, title) {
-        const projectData = window.projectDetails[projectKey];
-        if (!projectData) return;
-
-        modalTitle.textContent = projectData.title;
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-        
-        const html = window.createProjectDetailHTML(projectData);
-        document.querySelector('.modal-body').innerHTML = html;
+class Portfolio {
+    constructor() {
+        this.modalController = new ModalController();
+        this.initProjectImageEvents();
     }
 
-    // 이벤트 리스너
-    projectImages.forEach(image => {
-        image.addEventListener('click', function () {
-            const projectKey = this.getAttribute('data-project-key');
-            const projectTitle = this.getAttribute('data-project-title');
+    initProjectImageEvents() {
+        const projectImages = document.querySelectorAll('.project-image');
+        console.log('프로젝트 이미지 개수:', projectImages.length);
+
+        projectImages.forEach((image, index) => {
+            console.log(`이미지 ${index} 이벤트 리스너 등록됨`);
             
-            if (projectKey) {
-                openModal(projectKey, projectTitle);
-            }
-        });
-    });
-
-    // 모달 닫기
-    function closeModal() {
-        modal.classList.remove('show');
-        document.body.style.overflow = 'auto';
-    }
-
-    if (closeButton) {
-        closeButton.addEventListener('click', closeModal);
-    }
-
-    if (modal) {
-        modal.addEventListener('click', function (e) {
-            if (e.target === modal) {
-                closeModal();
-            }
+            image.addEventListener('click', (e) => {
+                const projectKey = e.currentTarget.getAttribute('data-project-key');
+                console.log('클릭된 프로젝트 키:', projectKey);
+                
+                if (projectKey && projectDetails[projectKey]) {
+                    this.modalController.openModal(projectDetails[projectKey]);
+                } else {
+                    console.error('프로젝트를 찾을 수 없습니다:', projectKey);
+                    console.log('사용 가능한 키들:', Object.keys(projectDetails));
+                }
+            });
         });
     }
+}
 
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && modal.classList.contains('show')) {
-            closeModal();
-        }
-    });
-
+// DOM이 로드되면 Portfolio 클래스 초기화
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM 로드됨, Portfolio 초기화 시작');
+    new Portfolio();
 });
-

@@ -170,6 +170,32 @@
          </div>
       </section>
 
+      <section class="section">
+         <h2 class="section-title">
+            <span class="emoji">📜</span>
+            CERTIFICATE
+         </h2>
+         <div class="certificate-grid">
+            <div class="certificate-item">
+               <div class="cert-header">
+                  <div class="cert-name">정보처리기사</div>
+                  <div class="cert-date">2025.06</div>
+               </div>
+               <div class="cert-issuer">한국산업인력공단</div>
+               <div class="cert-score">필기: 합격 실기: 접수예정</div>
+            </div>
+
+            <div class="certificate-item">
+               <div class="cert-header">
+                  <div class="cert-name">SQLD</div>
+                  <div class="cert-date">2025.05.31</div>
+               </div>
+               <div class="cert-issuer">한국데이터산업진흥원</div>
+               <div class="cert-score">결과 대기중</div>
+            </div>
+         </div>
+      </section>
+
       <!-- Awards Section -->
       <section class="section">
          <h2 class="section-title">
@@ -233,7 +259,7 @@
             </div>
 
             <div class="project-card">
-               <div class="project-image bg-2">
+               <div class="project-image bg-2" data-project-key="pintos" data-project-title="크래프톤 정글 핀토스 프로젝트">
                   🖥️
                </div>
                <div class="project-content">
@@ -260,7 +286,7 @@
          <h2>개인 프로젝트</h2><br>
          <div class="project-grid">
             <div class="project-card">
-               <div class="project-image bg-3">
+               <div class="project-image bg-3" data-project-key="imageArchive" data-project-title="Image Archive">
                   🐻‍❄️
                </div>
                <div class="project-content">
@@ -325,6 +351,83 @@
          </div>
       </section>
 
+      <!-- Learning & Development Section -->
+      <section class="section">
+         <h2 class="section-title">
+            <span class="emoji">📚</span>
+            LEARNING & DEVELOPMENT
+         </h2>
+
+         <h3 style="margin-bottom: 20px; font-size: 14px; font-weight: 600;">온라인 강의</h3>
+         <div class="learning-grid">
+            <div class="learning-item course">
+               <div class="learning-header">
+                  <div class="learning-title">스프링 핵심 원리 - 기본편</div>
+                  <div class="learning-date">2024.05</div>
+               </div>
+               <div class="learning-platform">인프런 - 김영한</div>
+               <div class="learning-status completed">수료</div>
+            </div>
+
+            <div class="learning-item course">
+               <div class="learning-header">
+                  <div class="learning-title">Java의 정석</div>
+                  <div class="learning-date">2024.03</div>
+               </div>
+               <div class="learning-platform">인프런 - 남궁성</div>
+               <div class="learning-status completed">수료</div>
+            </div>
+
+            <div class="learning-item course">
+               <div class="learning-header">
+                  <div class="learning-title">React 완벽 가이드</div>
+                  <div class="learning-date">2024.01</div>
+               </div>
+               <div class="learning-platform">Udemy</div>
+               <div class="learning-status completed">수료</div>
+            </div>
+         </div>
+
+         <h3 style="margin: 40px 0 20px 0; font-size: 14px; font-weight: 600;">도서</h3>
+         <div class="learning-grid">
+            <div class="learning-item book">
+               <div class="learning-header">
+                  <div class="learning-title">이펙티브 자바</div>
+                  <div class="learning-date">2024.06</div>
+               </div>
+               <div class="learning-platform">조슈아 블로크</div>
+               <div class="learning-status reading">읽는 중</div>
+            </div>
+
+            <div class="learning-item book">
+               <div class="learning-header">
+                  <div class="learning-title">스프링 부트와 AWS로 혼자 구현하는 웹 서비스</div>
+                  <div class="learning-date">2024.04</div>
+               </div>
+               <div class="learning-platform">이동욱</div>
+               <div class="learning-status completed">완독</div>
+            </div>
+
+            <div class="learning-item book">
+               <div class="learning-header">
+                  <div class="learning-title">클린 코드</div>
+                  <div class="learning-date">2024.02</div>
+               </div>
+               <div class="learning-platform">로버트 C. 마틴</div>
+               <div class="learning-status completed">완독</div>
+            </div>
+
+            <div class="learning-item book">
+               <div class="learning-header">
+                  <div class="learning-title">HTTP 완벽 가이드</div>
+                  <div class="learning-date">2024.01</div>
+               </div>
+               <div class="learning-platform">데이빗 고울리</div>
+               <div class="learning-status completed">완독</div>
+            </div>
+         </div>
+      </section>
+
       <!-- Others Section -->
       <section class="section">
          <h2 class="section-title">
@@ -385,10 +488,8 @@
       </div>
    </div>
 
-   <!-- 파일들을 순서대로 로드 -->
-   <script src="js/projectData.js"></script>
-   <script src="js/projectTemplate.js"></script>
-   <script src="js/main.js"></script>
+   <!--  ES6 모듈 로드-->
+   <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
