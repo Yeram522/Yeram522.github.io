@@ -1,0 +1,237 @@
+/* 클릭 가능한 아이템 스타일 */
+.clickable-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.clickable-item:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hover-hint {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    background-color: #2196f3;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    z-index: 2;
+}
+
+.clickable-item:hover .hover-hint {
+    display: block;
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 상세 모달 스타일 */
+.detail-modal-content {
+    max-width: 900px;
+    max-height: 85vh;
+}
+
+.detail-modal-body {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.detail-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.detail-section {
+    margin-bottom: 25px;
+}
+
+.detail-section h4 {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+}
+
+.detail-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.detail-meta-item {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.detail-meta-label {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.detail-meta-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 이미지 갤러리 */
+.image-gallery {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.gallery-container {
+    position: relative;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-main {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.gallery-image.active {
+    display: block;
+}
+
+.gallery-placeholder {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.gallery-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.gallery-btn {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+.gallery-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+
+.gallery-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.gallery-caption {
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+}
+
+.gallery-caption h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.gallery-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.gallery-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gallery-indicator.active {
+    background-color: #2196f3;
+    transform: scale(1.2);
+}
+
+.gallery-counter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .detail-modal-body {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .image-gallery {
+        max-width: none;
+    }
+    
+    .detail-meta {
+        grid-template-columns: 1fr;
+    }
+}
